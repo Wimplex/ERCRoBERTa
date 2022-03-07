@@ -1,0 +1,32 @@
+# --- RoBERTa fine-tuning config ---
+
+datasets:
+  - "DailyDialog"
+  # - "MELD"
+  # - "IEMOCAP"
+
+task:
+  metric: "accuracy"
+
+  dataset:
+    dialogue_context_size: 4
+    sep_token: "</s>"
+    batch_size: 64
+
+  tokenizer:
+    pretrained_model_name_or_path: "blinoff/roberta-base-russian-v0"
+    max_len: 512
+
+  model:
+    pretrained_model_name_or_path: "blinoff/roberta-base-russian-v0"
+    num_labels: 7
+
+  training_args:
+    num_train_epochs: 10
+    learning_rate: 0.0003
+    evaluation_strategy: 'steps'
+    save_strategy: 'epoch'
+    eval_steps: 700
+    save_steps: 1
+    output_dir: 'temp'
+  

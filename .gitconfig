@@ -1,0 +1,8 @@
+# Python
+__pycache__/
+
+# Git
+.gitignore
+
+# Project
+temp/
