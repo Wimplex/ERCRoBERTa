@@ -1,4 +1,4 @@
-# --- Config for dataset translation task --- 
+# --- Config for datasets translation task --- 
 
 datasets:
   - "DailyDialog"

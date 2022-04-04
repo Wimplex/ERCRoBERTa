@@ -35,7 +35,12 @@ class RusEngTranslator:
         self.translator.to(self._device)
         return decoded
 
-    def translate_texts(self, texts: List[str], verbose: bool = False, desc: str = '') -> str:
+    def translate_texts(
+        self, 
+        texts: List[str], 
+        verbose: bool = False, 
+        desc: str = ''
+        ) -> List[str]:
         """ Translates list of texts """
 
         self._switch_device()
